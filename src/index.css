@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+    /* Paleta COSPABI (Verdes Naturaleza & Agua Fresca) */
+    --color-crm-50: #ecfdf5;
+    --color-crm-100: #d1fae5;
+    --color-crm-200: #a7f3d0;
+    --color-crm-300: #6ee7b7;
+    --color-crm-400: #34d399;
+    --color-crm-500: #10b981;
+    --color-crm-600: #059669;
+    /* Verde Principal */
+    --color-crm-700: #047857;
+    --color-crm-800: #065f46;
+    --color-crm-900: #064e3b;
+    --color-crm-950: #022c22;
+
+    /* Paleta Secundaria (Neutros Limpios) */
+    --color-secondary-50: #fbfbfe;
+    --color-secondary-100: #f3f4f6;
+    --color-secondary-200: #e5e7eb;
+    --color-secondary-300: #d1d5db;
+    --color-secondary-400: #9ca3af;
+    --color-secondary-500: #6b7280;
+    --color-secondary-600: #4b5563;
+    --color-secondary-700: #374151;
+    --color-secondary-800: #1f2937;
+    --color-secondary-900: #111827;
+    --color-secondary-950: #030712;
+
+    /* Tipografía */
+    --font-sans: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+    body {
+        @apply font-sans antialiased text-secondary-800 bg-secondary-50;
+    }
+}
+
+@layer components {
+
+    /* Premium Input Style */
+    .input-premium {
+        @apply w-full px-4 py-3 bg-white border border-secondary-200 rounded-xl focus:ring-2 focus:ring-crm-500 focus:border-crm-500 transition-all duration-200 outline-none text-secondary-700 placeholder:text-secondary-400 font-medium;
+    }
+
+    /* Premium Button Style (Green Theme) */
+    .btn-primary {
+        @apply px-6 py-3 bg-gradient-to-r from-crm-700 to-crm-600 hover:from-crm-600 hover:to-crm-500 text-white font-semibold rounded-xl shadow-lg shadow-crm-600/20 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed;
+    }
+
+    .btn-secondary {
+        @apply px-6 py-3 bg-white hover:bg-crm-50 text-crm-800 font-semibold rounded-xl border border-secondary-200 shadow-sm transition-all duration-200;
+    }
+
+    .glass-card {
+        @apply bg-white border border-secondary-100 shadow-xl rounded-2xl;
+    }
+}
