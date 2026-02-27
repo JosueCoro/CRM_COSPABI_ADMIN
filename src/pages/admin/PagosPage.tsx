@@ -310,7 +310,7 @@ export function PagosPage() {
                                     className={`p-4 rounded-xl border-2 transition-all flex flex-col items-center gap-2 ${metodoPago === 'TRANSFERENCIA' ? 'border-crm-500 bg-crm-50' : 'border-secondary-100 hover:border-secondary-200'}`}
                                 >
                                     <History className={metodoPago === 'TRANSFERENCIA' ? 'text-crm-600' : 'text-secondary-400'} />
-                                    <span className={`text-xs font-bold ${metodoPago === 'TRANSFERENCIA' ? 'text-crm-700' : 'text-secondary-500'}`}>TRANSFERENCIA</span>
+                                    <span className={`text-xs font-bold ${metodoPago === 'TRANSFERENCIA' ? 'text-crm-700' : 'text-secondary-500'}`}>TRANSFERENCIA DE QR</span>
                                 </button>
                             </div>
                         </div>
