@@ -4,7 +4,7 @@ import { UsuarioService } from '../../services/usuario.service';
 import type { Rol } from '../../services/rol.service';
 import { RolService } from '../../services/rol.service';
 import { Modal } from '../../components/ui/Modal';
-import { Plus, Edit2, Trash2, Search, CheckCircle, XCircle, RefreshCw, UserPlus } from 'lucide-react';
+import { Edit2, Trash2, Search, CheckCircle, XCircle, RefreshCw, UserPlus } from 'lucide-react';
 
 export function UsuariosPage() {
     const [users, setUsers] = useState<UserAdmin[]>([]);
@@ -104,7 +104,7 @@ export function UsuariosPage() {
                 // Remove password if empty (don't update it)
                 if (!updateData.contraseña) delete updateData.contraseña;
 
-                const updated = await UsuarioService.update(currentUser.id_usuario_admin, updateData);
+                await UsuarioService.update(currentUser.id_usuario_admin, updateData);
                 // Refresh list to get role name joined
                 loadData();
             } else {
